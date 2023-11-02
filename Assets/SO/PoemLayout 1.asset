@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d25c19fe19b64eec985395df7cd4300, type: 3}
+  m_Name: PoemLayout 1
+  m_EditorClassIdentifier: 
+  poemNumRows: 8
+  poemNumCols: 8
+  allWords: '@ ! Z Y X W V U T S R Q P O N M L K J I H G F E D C B A z y x w v u
+    t s r q p o n m l k j i h g f e d c b a 0 9 8 7 6 5 4 3 2 1'
+  poem:
+    lines:
+    - words:
+      - '@'
+      - '!'
+      - Z
+      - Y
+      - X
+      - W
+      - V
+      - U
+    - words:
+      - T
+      - S
+      - R
+      - Q
+      - P
+      - O
+      - N
+      - M
+    - words:
+      - L
+      - K
+      - J
+      - I
+      - H
+      - G
+      - F
+      - E
+    - words:
+      - D
+      - C
+      - B
+      - A
+      - z
+      - y
+      - x
+      - w
+    - words:
+      - v
+      - u
+      - t
+      - s
+      - r
+      - q
+      - p
+      - o
+    - words:
+      - n
+      - m
+      - l
+      - k
+      - j
+      - i
+      - h
+      - g
+    - words:
+      - f
+      - e
+      - d
+      - c
+      - b
+      - a
+      - 0
+      - 9
+    - words:
+      - 8
+      - 7
+      - 6
+      - 5
+      - 4
+      - 3
+      - 2
+      - 1
