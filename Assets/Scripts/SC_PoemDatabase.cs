@@ -4,32 +4,32 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-[Serializable]
-public class Line
-{
-    public String[] words;
-    public Line(int numWords)
-    {
-        words = new String[numWords];
-    }
-}
-
-[Serializable]
-public class Poem
-{
-    public Line[] lines;
-    public Poem(int numLines, int numWords)
-    {
-        lines = new Line[numLines];
-        for (int i = 0; i < numLines; i++)
-        {
-            lines[i] = new Line(numWords);
-        }
-    }
-}
-
 public class SC_PoemDatabase : MonoBehaviour
 {
+    [Serializable]
+    public class Line
+    {
+        public String[] words;
+        public Line(int numWords)
+        {
+            words = new String[numWords];
+        }
+    }
+
+    [Serializable]
+    public class Poem
+    {
+        public Line[] lines;
+        public Poem(int numLines, int numWords)
+        {
+            lines = new Line[numLines];
+            for (int i = 0; i < numLines; i++)
+            {
+                lines[i] = new Line(numWords);
+            }
+        }
+    }
+
     [SerializeField]
     private string[] currentLine;
 
@@ -115,12 +115,12 @@ public class SC_PoemDatabase : MonoBehaviour
     }
 
 
-    public void AddNextWordToCurrentLine(SC_Grid grid, int row)
+    public void AddNextWordToCurrentLine(SC_Grid grid)
     {
-        currentLine[row] = grid.myWord;
+        currentLine[grid.coordinate.y] = grid.myWord;
 
         // deselect all grid of this row
-        SC_GridMatrix.Singleton.DeselectRow(row);
+        SC_GridMatrix.Singleton.DeselectRow(grid.coordinate.y);
 
         // then select the grid
         grid.Select();

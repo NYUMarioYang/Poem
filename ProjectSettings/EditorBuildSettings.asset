@@ -8,4 +8,49 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Particle Backgrounds/Scenes/sc_achievement.unity
+    guid: aca9ba7001a35f646bef5c055499c2e3
+  - enabled: 1
+    path: Assets/Particle Backgrounds/Scenes/sc_beans.unity
+    guid: a1af9c5fe7f093945965e1f097971a74
+  - enabled: 1
+    path: Assets/Particle Backgrounds/Scenes/sc_beans2.unity
+    guid: 8823c2b7a815672438b41a03f92452d9
+  - enabled: 1
+    path: Assets/Particle Backgrounds/Scenes/sc_boba.unity
+    guid: 62b41d9bdee617041b1f119ed89ef4e4
+  - enabled: 1
+    path: Assets/Particle Backgrounds/Scenes/sc_boba2.unity
+    guid: f15ea663dfe77314ba08902103c590d2
+  - enabled: 1
+    path: Assets/Particle Backgrounds/Scenes/sc_carbonated.unity
+    guid: 0beff101724c19f4a8ec66f1cdd1788c
+  - enabled: 1
+    path: Assets/Particle Backgrounds/Scenes/sc_digital.unity
+    guid: eea48e8e94119e04ba11aaddc50089ce
+  - enabled: 1
+    path: Assets/Particle Backgrounds/Scenes/sc_disco.unity
+    guid: 4610a53cf5380f544b0cddfd4b251270
+  - enabled: 1
+    path: Assets/Particle Backgrounds/Scenes/sc_disco2.unity
+    guid: 00e27995a138d314a989630a1bccfbd8
+  - enabled: 1
+    path: Assets/Particle Backgrounds/Scenes/sc_hearts.unity
+    guid: d91cff7a41f05254587487b3a3d39e4d
+  - enabled: 1
+    path: Assets/Particle Backgrounds/Scenes/sc_retro.unity
+    guid: 020e14a2b0d5fd14caf4e7d97f9de461
+  - enabled: 1
+    path: Assets/Particle Backgrounds/Scenes/sc_risingstars.unity
+    guid: 64d9d1a96f35ad74b9d356e4b7ddfce8
+  - enabled: 1
+    path: Assets/Particle Backgrounds/Scenes/sc_skulls.unity
+    guid: d224d3c7d74e85041b07ca2156133e82
+  - enabled: 1
+    path: Assets/Particle Backgrounds/Scenes/sc_skulls2.unity
+    guid: aaab35f465b8d214784d9a91fb034d6c
+  - enabled: 1
+    path: Assets/Particle Backgrounds/Scenes/sc_trypo.unity
+    guid: 31d0de8244c3c974caf7a2e82d342911
   m_configObjects: {}

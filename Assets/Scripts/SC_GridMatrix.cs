@@ -15,6 +15,9 @@ public class SC_GridMatrix : MonoBehaviour
     public static SC_GridMatrix Singleton;
     private List<List<SC_Grid>> gridRows;
 
+    public float xOffset;
+    public float yOffset;
+
 
     private void Awake()
     {
@@ -64,14 +67,15 @@ public class SC_GridMatrix : MonoBehaviour
                 float posY = -(j * matrixHeight / numCols);  // Negative because in Unity the y-axis is positive upwards
 
                 // Adjust positions so the entire grid system is centered around the SC_GridMatrix GameObject
-                posX -= matrixWidth * 0.5f;
-                posY += matrixHeight * 0.5f;
+                posX -= matrixWidth * 0.5f - xOffset;
+                posY += matrixHeight * 0.5f + yOffset;
 
                 grid.transform.localPosition = new Vector3(posX, posY, 0);
                 grid.name = "Grid " + i + " " + j;
-                grid.AddComponent<SC_Grid>();
                 grid.GetComponent<SC_Grid>().SetCoordinate(new Coordinate(i, j));
-                grid.GetComponent<SC_Grid>().SetWord(poemLayouts[GlobalVariables.currentLineIndex].poem.lines[j].words[i]);
+                grid.GetComponent<SC_Grid>().SetWord(poemLayouts[GlobalVariables.currentLineIndex].poem.lines[j].words[i].word);
+                grid.GetComponent<SC_Grid>().SetMidiNote(poemLayouts[GlobalVariables.currentLineIndex].poem.lines[j].words[i].midiNote);
+                grid.GetComponent<SC_Grid>().SetVelocity(poemLayouts[GlobalVariables.currentLineIndex].poem.lines[j].words[i].noteIdleVelocity, poemLayouts[GlobalVariables.currentLineIndex].poem.lines[j].words[i].noteActiveVelocity);
 
                 gridRows[j].Add(grid.GetComponent<SC_Grid>());
 

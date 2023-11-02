@@ -1,21 +1,43 @@
+using jp.kshoji.unity.midi;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class SC_Grid : MonoBehaviour
 {
     public Coordinate coordinate { get; private set; }
     public string myWord;
+    public int midiNote;
+    public int noteIdleVelocity;
+    public int noteActiveVelocity;
 
-    public static event Action<SC_Grid, int> OnGridClicked;
+
+    public static event Action<SC_Grid> OnGridClicked;
 
     private SpriteRenderer spriteRenderer;
-    private bool selected = false;
+
+    [SerializeField] private Material myMaterial;
+
+    [ColorUsage(true, true)]
+    public Color selectedColor;
+
+    [ColorUsage(true, true)]
+    public Color unselectedColor;
 
     private void Start()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        ParticleSystem particleSystem = transform.Find("VFX/shield").GetComponent<ParticleSystem>();
+        myMaterial = new(particleSystem.GetComponent<Renderer>().material);
+        particleSystem.GetComponent<Renderer>().material = myMaterial;
+
+        myMaterial.SetColor("Color_EF401FF9", unselectedColor);
+        myMaterial.SetColor("Color_C8F38133", unselectedColor);
+
+        GlobalVariables.gridByMidiNote[midiNote] = this;
     }
 
     private void Update()
@@ -27,7 +49,7 @@ public class SC_Grid : MonoBehaviour
             if (IsMouseOver())
             {
                 Debug.Log("Clicked on " + myWord);
-                OnGridClicked?.Invoke(this, coordinate.y);
+                OnGridClicked?.Invoke(this);
             }
         }
     }
@@ -56,18 +78,50 @@ public class SC_Grid : MonoBehaviour
         myWord = word;
     }
 
+    public void SetMidiNote(int midiNote)
+    {
+        this.midiNote = midiNote;
+    }
+
+    public void SetVelocity(int idle, int active)
+    {
+        noteIdleVelocity = idle;
+        noteActiveVelocity = active;
+    }
+
+    public static void TriggerGridSelection(int midiNote)
+    {
+        if (GlobalVariables.gridByMidiNote.TryGetValue(midiNote, out SC_Grid grid))
+        {
+            OnGridClicked?.Invoke(grid);
+        }
+    }
+
     public void Select()
     {
-        spriteRenderer.color = Color.red;
-        selected = true;
+        MidiManager.Instance.SendMidiNoteOn(GlobalVariables.deviceIds[GlobalVariables.deviceIdIndex], 0, GlobalVariables.channel, midiNote, noteActiveVelocity);
+
+        myMaterial.SetColor("Color_EF401FF9", selectedColor);
+        myMaterial.SetColor("Color_C8F38133", selectedColor);
+        var props = MaterialEditor.GetMaterialProperties(new UnityEngine.Object[] { myMaterial });
+
+        foreach (var prop in props)
+        {
+            //Debug.Log(prop.name);
+        }
     }
 
 
 
     public void Deselect()
     {
-        spriteRenderer.color = Color.white;
-        selected = false;
+        MidiManager.Instance.SendMidiNoteOn(GlobalVariables.deviceIds[GlobalVariables.deviceIdIndex], 0, GlobalVariables.channel, midiNote, noteIdleVelocity);
+
+        myMaterial.SetColor("Color_EF401FF9", unselectedColor);
+        myMaterial.SetColor("Color_C8F38133", unselectedColor);
+
+
+
     }
 
 

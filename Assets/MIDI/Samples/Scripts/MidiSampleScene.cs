@@ -125,6 +125,12 @@ namespace jp.kshoji.unity.midi.sample
                     audioSource.PlayOneShot(audioClips[note.GetMessage()[1]], note.GetMessage()[2] / 127f);
                 }
             }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                showSendMidiWindow = !showSendMidiWindow;
+                showReceiveMidiWindow = !showReceiveMidiWindow;
+            }
         }
 
         private const int MaxNumberOfReceiverMidiMessages = 50;
@@ -221,6 +227,7 @@ namespace jp.kshoji.unity.midi.sample
                         if (GUILayout.Button("NoteOn"))
                         {
                             MidiManager.Instance.SendMidiNoteOn(deviceIds[deviceIdIndex], 0, (int)channel, (int)noteNumber, (int)velocity);
+                            Debug.Log($"{deviceIdIndex} NoteOn: {deviceIds[deviceIdIndex]}, channel: {channel}, note: {noteNumber}, velocity: {velocity}");
                         }
                         if (GUILayout.Button("NoteOff"))
                         {
@@ -524,6 +531,8 @@ namespace jp.kshoji.unity.midi.sample
         public void OnMidiNoteOn(string deviceId, int group, int channel, int note, int velocity)
         {
             receivedMidiMessages.Add($"OnMidiNoteOn from: {deviceId}, channel: {channel}, note: {note}, velocity: {velocity}");
+
+            SC_Grid.TriggerGridSelection(note);
 
             if (isPlaySound)
             {
