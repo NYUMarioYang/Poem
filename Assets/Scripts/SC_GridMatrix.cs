@@ -31,10 +31,12 @@ public class SC_GridMatrix : MonoBehaviour
         }
     }
 
-    void Start()
+    IEnumerator Start()
     {
         numRows = poemLayouts[0].poemNumRows;
         numCols = poemLayouts[0].poemNumCols;
+
+        yield return new WaitForSeconds(0.02f);
 
         InitializeGridMatrix();
     }
@@ -49,6 +51,12 @@ public class SC_GridMatrix : MonoBehaviour
 
     public void InitializeGridMatrix()
     {
+        // delete all children
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+
         gridRows = new List<List<SC_Grid>>(numRows);
         for (int i = 0; i < numRows; i++)
         {
@@ -81,6 +89,8 @@ public class SC_GridMatrix : MonoBehaviour
 
             }
         }
+
+        SC_MidiLightControl.Singleton.SetAllNotesToIdle();
     }
 
     public void DeselectRow(int rowIndex)

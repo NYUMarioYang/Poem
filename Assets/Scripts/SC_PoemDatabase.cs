@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEngine;
 
 public class SC_PoemDatabase : MonoBehaviour
@@ -36,10 +37,16 @@ public class SC_PoemDatabase : MonoBehaviour
     public Poem poem;
     public int poemNumLines;
     private int poemNumWords;
-
-    public string testWord;
+    public TextMeshProUGUI poemTMP;
 
     public static SC_PoemDatabase Singleton;
+
+    [SerializeField] private string poemString;
+
+    [SerializeField]
+    private float typingSpeed = 0.1f;
+
+    private AudioSource audioSource;
 
     private void Awake()
     {
@@ -65,6 +72,7 @@ public class SC_PoemDatabase : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         poemNumWords = SC_GridMatrix.Singleton.numCols;
         InitializePoem(poemNumLines, poemNumWords);
     }
@@ -83,35 +91,49 @@ public class SC_PoemDatabase : MonoBehaviour
         //     InitializePoem(poemNumLines, poemNumWords);
         // }
 
-        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            // if currentLine is not empty
-            foreach (string word in currentLine)
-            {
-                if (word == null)
-                {
-                    return;
-                }
-            }
-
             AddLineToDatabase();
-            currentLine = new string[poemNumWords];
         }
     }
 
-    private void AddLineToDatabase()
+    public void AddLineToDatabase()
     {
-
+        foreach (string word in currentLine)
+        {
+            if (word == null)
+            {
+                return;
+            }
+        }
 
         poem.lines[GlobalVariables.currentLineIndex].words = currentLine;
         foreach (string word in poem.lines[GlobalVariables.currentLineIndex].words)
         {
-            Debug.Log(word);
+            poemString += word + " ";
         }
+        poemString += "\n";
+
+        StartCoroutine(TypeLine(poemString));
+
 
         GlobalVariables.currentLineIndex++;
         Debug.Log($"currentLineIndex: {GlobalVariables.currentLineIndex}");
         SC_GridMatrix.Singleton.InitializeGridMatrix();
+        currentLine = new string[poemNumWords];
+
+    }
+
+    IEnumerator TypeLine(string line)
+    {
+        audioSource.Play();
+        poemTMP.text = ""; // Clear the existing text.
+        foreach (char letter in line.ToCharArray())
+        {
+            poemTMP.text += letter; // Add one character to the text.
+            yield return new WaitForSeconds(typingSpeed); // Wait before adding the next character.
+        }
+        audioSource.Stop();
     }
 
 

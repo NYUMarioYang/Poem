@@ -14,6 +14,12 @@ public class SC_Grid : MonoBehaviour
     public int noteIdleVelocity;
     public int noteActiveVelocity;
 
+    private AudioSource audioSource;
+    public List<AudioClip> audioClips;
+
+    private float lastAudioPlayTime = 0f;
+    private float audioCooldown = 0.5f;
+
 
     public static event Action<SC_Grid> OnGridClicked;
 
@@ -29,6 +35,7 @@ public class SC_Grid : MonoBehaviour
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         ParticleSystem particleSystem = transform.Find("VFX/shield").GetComponent<ParticleSystem>();
         myMaterial = new(particleSystem.GetComponent<Renderer>().material);
@@ -108,6 +115,14 @@ public class SC_Grid : MonoBehaviour
         foreach (var prop in props)
         {
             //Debug.Log(prop.name);
+        }
+
+        // play a random audio clip
+        if (Time.time - lastAudioPlayTime >= audioCooldown)
+        {
+            audioSource.clip = audioClips[UnityEngine.Random.Range(0, audioClips.Count)];
+            audioSource.Play();
+            lastAudioPlayTime = Time.time; // Update the last play time
         }
     }
 

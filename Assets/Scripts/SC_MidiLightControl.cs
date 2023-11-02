@@ -17,13 +17,31 @@ public class SC_MidiLightControl : MonoBehaviour
 
     public int idleColor = 78;
 
+    public static SC_MidiLightControl Singleton;
+
+    private void Awake()
+    {
+        if (Singleton == null)
+        {
+            Singleton = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+
     IEnumerator Start()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.01f);
 
         GlobalVariables.deviceIds = MidiManager.Instance.DeviceIdSet.ToArray();
         GlobalVariables.deviceIdIndex = deviceIdIndex;
         GlobalVariables.channel = channel;
+    }
+
+    public void SetAllNotesToIdle()
+    {
 
         for (int i = 11; i <= 88; i++)
         {
@@ -33,9 +51,8 @@ public class SC_MidiLightControl : MonoBehaviour
                 continue;
             }
             MidiManager.Instance.SendMidiNoteOn(GlobalVariables.deviceIds[deviceIdIndex], 0, channel, i, idleColor);
-
         }
-
+        MidiManager.Instance.SendMidiNoteOn(GlobalVariables.deviceIds[deviceIdIndex], 0, channel, 19, 5);
     }
 
     private void OnEnable()

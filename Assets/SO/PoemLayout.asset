@@ -14,143 +14,276 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poemNumRows: 8
   poemNumCols: 8
-  allWords: 1 2 3 4 5 6 7 8 9 0 a b c d e f g h i j k l m n o p q r s t u v w x y
-    z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ! @
+  allWords: Drifting Forgotten Vanishing Ancient Crumbling Serene Fragile Distance
+    stars spirits wanderers sonnets cascades echoes souls fables dance shatter weave
+    inscribe sprint search paint sing across within through beyond against towards
+    into over hallowed frozen decayed desolate majestic ethereal abandoned blazing
+    universe dream night horizon sky memory sea chasm seeking discovering whispering
+    contemplating roaring unraveling nourishing evoking serenity destiny eternity
+    harmony genesis chaos enlightenment solitude
   poem:
     lines:
     - words:
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
+      - word: Drifting
+        midiNote: 81
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: Forgotten
+        midiNote: 82
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: Vanishing
+        midiNote: 83
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: Ancient
+        midiNote: 84
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: Crumbling
+        midiNote: 85
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: Serene
+        midiNote: 86
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: Fragile
+        midiNote: 87
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: Distant
+        midiNote: 88
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
     - words:
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
+      - word: stars
+        midiNote: 71
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: spirits
+        midiNote: 72
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: wanderers
+        midiNote: 73
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: sonnets
+        midiNote: 74
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: cascades
+        midiNote: 75
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: echoes
+        midiNote: 76
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: souls
+        midiNote: 77
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: fables
+        midiNote: 78
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
     - words:
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
+      - word: dance
+        midiNote: 61
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: shatter
+        midiNote: 62
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: weave
+        midiNote: 63
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: inscribe
+        midiNote: 64
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: sprint
+        midiNote: 65
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: search
+        midiNote: 66
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: paint
+        midiNote: 67
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: sing
+        midiNote: 68
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
     - words:
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
+      - word: across
+        midiNote: 51
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: within
+        midiNote: 52
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: through
+        midiNote: 53
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: beyond
+        midiNote: 54
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: against
+        midiNote: 55
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: towards
+        midiNote: 56
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: into
+        midiNote: 57
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: over
+        midiNote: 58
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
     - words:
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
+      - word: hallowed
+        midiNote: 41
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: frozen
+        midiNote: 42
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: decayed
+        midiNote: 43
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: desolate
+        midiNote: 44
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: majestic
+        midiNote: 45
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: ethereal
+        midiNote: 46
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: abandoned
+        midiNote: 47
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: blazing
+        midiNote: 48
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
     - words:
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
+      - word: universe
+        midiNote: 31
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: dream
+        midiNote: 32
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: night
+        midiNote: 33
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: horizon
+        midiNote: 34
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: sky
+        midiNote: 35
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: memory
+        midiNote: 36
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: sea
+        midiNote: 37
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: chasm
+        midiNote: 38
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
     - words:
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
+      - word: seeking
+        midiNote: 21
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: discovering
+        midiNote: 22
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: whispering
+        midiNote: 23
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: contemplating
+        midiNote: 24
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: roaring
+        midiNote: 25
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: unraveling
+        midiNote: 26
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: nourishing
+        midiNote: 27
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: evoking
+        midiNote: 28
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
     - words:
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
-      - word: 
-        midiNote: 0
+      - word: serenity
+        midiNote: 11
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: destiny
+        midiNote: 12
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: eternity
+        midiNote: 13
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: harmony
+        midiNote: 14
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: genesis
+        midiNote: 15
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: chaos
+        midiNote: 16
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: enlightenment
+        midiNote: 17
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: solitude
+        midiNote: 18
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5

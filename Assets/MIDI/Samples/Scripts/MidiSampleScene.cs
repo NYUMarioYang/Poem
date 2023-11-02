@@ -534,6 +534,11 @@ namespace jp.kshoji.unity.midi.sample
 
             SC_Grid.TriggerGridSelection(note);
 
+            if (note == 19)
+            {
+                SC_PoemDatabase.Singleton.AddLineToDatabase();
+            }
+
             if (isPlaySound)
             {
                 lock (NoteOnQueue)
