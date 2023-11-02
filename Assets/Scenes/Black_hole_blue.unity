@@ -1047,7 +1047,7 @@ MonoBehaviour:
   poemNumLines: 4
   poemTMP: {fileID: 713606322}
   poemString: 
-  typingSpeed: 0.1
+  typingSpeed: 0.06
 --- !u!4 &1807535168
 Transform:
   m_ObjectHideFlags: 0
@@ -1207,6 +1207,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poemLayouts:
+  - {fileID: 11400000, guid: ff46e9a7fd3ef4b6da9c94507e33c1d8, type: 2}
+  - {fileID: 11400000, guid: ff46e9a7fd3ef4b6da9c94507e33c1d8, type: 2}
+  - {fileID: 11400000, guid: 1c0dfd0dc17d84706b2d97d4c5f3a62d, type: 2}
   - {fileID: 11400000, guid: ff46e9a7fd3ef4b6da9c94507e33c1d8, type: 2}
   - {fileID: 11400000, guid: ff46e9a7fd3ef4b6da9c94507e33c1d8, type: 2}
   numCols: 8

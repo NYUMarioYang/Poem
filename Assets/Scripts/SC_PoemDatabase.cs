@@ -97,44 +97,45 @@ public class SC_PoemDatabase : MonoBehaviour
         }
     }
 
-    public void AddLineToDatabase()
-    {
-        foreach (string word in currentLine)
-        {
-            if (word == null)
-            {
-                return;
+    public void AddLineToDatabase() {
+        // Check if all words in the current line are not null or empty.
+        foreach (string word in currentLine) {
+            if (string.IsNullOrEmpty(word)) {
+                return; // If there is a null or empty word, we don't add the line to the database.
             }
         }
 
+        // Add the current line to the poem data structure.
         poem.lines[GlobalVariables.currentLineIndex].words = currentLine;
-        foreach (string word in poem.lines[GlobalVariables.currentLineIndex].words)
-        {
-            poemString += word + " ";
+
+        // Prepare the latest line to be added to the poem display.
+        string latestLine = "";
+        foreach (string word in poem.lines[GlobalVariables.currentLineIndex].words) {
+            latestLine += word + " ";
         }
-        poemString += "\n";
+        latestLine = latestLine.TrimEnd() + "\n"; // Trim the last space and add a newline.
 
-        StartCoroutine(TypeLine(poemString));
+        // Call TypeLine with only the latest line.
+        StartCoroutine(TypeLine(latestLine));
 
-
+        // Reset for the next line.
         GlobalVariables.currentLineIndex++;
-        Debug.Log($"currentLineIndex: {GlobalVariables.currentLineIndex}");
         SC_GridMatrix.Singleton.InitializeGridMatrix();
         currentLine = new string[poemNumWords];
-
     }
 
-    IEnumerator TypeLine(string line)
-    {
+    IEnumerator TypeLine(string line) {
+        GlobalVariables.ready = false;
         audioSource.Play();
-        poemTMP.text = ""; // Clear the existing text.
-        foreach (char letter in line.ToCharArray())
-        {
-            poemTMP.text += letter; // Add one character to the text.
+        int startLength = poemTMP.text.Length; // Start typing from the current length of the text.
+        foreach (char letter in line.ToCharArray()) {
+            poemTMP.text += letter; // Append one character to the text.
             yield return new WaitForSeconds(typingSpeed); // Wait before adding the next character.
         }
         audioSource.Stop();
+        GlobalVariables.ready = true;
     }
+
 
 
     public void AddNextWordToCurrentLine(SC_Grid grid)

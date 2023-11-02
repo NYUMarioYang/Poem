@@ -14,79 +14,275 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poemNumRows: 8
   poemNumCols: 8
-  allWords: '@ ! Z Y X W V U T S R Q P O N M L K J I H G F E D C B A z y x w v u
-    t s r q p o n m l k j i h g f e d c b a 0 9 8 7 6 5 4 3 2 1'
+  allWords: 'I You He She I They He She gently ruthlessly cunningly desperately solemnly
+    longingly accidentally spitefully kiss confront honor nurture shroud hug enslave
+    dissect him her him her me them me you as-he but-she while-I and-you while-he
+    as-she and-I but-they fiercely relentlessly  secretly persistently cheerfully
+    gently passionately tenaciously touch forsake condemn kiss exposes idolize repel
+    hug her me them him her me you him  '
   poem:
     lines:
     - words:
-      - '@'
-      - '!'
-      - Z
-      - Y
-      - X
-      - W
-      - V
-      - U
+      - word: I
+        midiNote: 81
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: You
+        midiNote: 82
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: He
+        midiNote: 83
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: She
+        midiNote: 84
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: I
+        midiNote: 85
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: They
+        midiNote: 86
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: He
+        midiNote: 87
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: She
+        midiNote: 88
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
     - words:
-      - T
-      - S
-      - R
-      - Q
-      - P
-      - O
-      - N
-      - M
+      - word: gently
+        midiNote: 71
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: ruthlessly
+        midiNote: 72
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: cunningly
+        midiNote: 73
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: desperately
+        midiNote: 74
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: solemnly
+        midiNote: 75
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: longingly
+        midiNote: 76
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: accidentally
+        midiNote: 77
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: spitefully
+        midiNote: 78
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
     - words:
-      - L
-      - K
-      - J
-      - I
-      - H
-      - G
-      - F
-      - E
+      - word: kiss
+        midiNote: 61
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: confront
+        midiNote: 62
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: honor
+        midiNote: 63
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: nurture
+        midiNote: 64
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: shroud
+        midiNote: 65
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: hug
+        midiNote: 66
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: enslave
+        midiNote: 67
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: dissect
+        midiNote: 68
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
     - words:
-      - D
-      - C
-      - B
-      - A
-      - z
-      - y
-      - x
-      - w
+      - word: him
+        midiNote: 51
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: her
+        midiNote: 52
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: him
+        midiNote: 53
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: her
+        midiNote: 54
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: me
+        midiNote: 55
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: them
+        midiNote: 56
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: me
+        midiNote: 57
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: you
+        midiNote: 58
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
     - words:
-      - v
-      - u
-      - t
-      - s
-      - r
-      - q
-      - p
-      - o
+      - word: as he
+        midiNote: 41
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: but she
+        midiNote: 42
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: while I
+        midiNote: 43
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: and you
+        midiNote: 44
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: while he
+        midiNote: 45
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: as she
+        midiNote: 46
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: and I
+        midiNote: 47
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: but they
+        midiNote: 48
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
     - words:
-      - n
-      - m
-      - l
-      - k
-      - j
-      - i
-      - h
-      - g
+      - word: fiercely
+        midiNote: 31
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: relentlessly
+        midiNote: 32
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: 
+        midiNote: 33
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: secretly
+        midiNote: 34
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: persistently
+        midiNote: 35
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: cheerfully
+        midiNote: 36
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: gently
+        midiNote: 37
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: passionately
+        midiNote: 38
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
     - words:
-      - f
-      - e
-      - d
-      - c
-      - b
-      - a
-      - 0
-      - 9
+      - word: tenaciously
+        midiNote: 21
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: touch
+        midiNote: 22
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: forsake
+        midiNote: 23
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: condemn
+        midiNote: 24
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: kiss
+        midiNote: 25
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: exposes
+        midiNote: 26
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: idolize
+        midiNote: 27
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: repel
+        midiNote: 28
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
     - words:
-      - 8
-      - 7
-      - 6
-      - 5
-      - 4
-      - 3
-      - 2
-      - 1
+      - word: hug
+        midiNote: 11
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: her
+        midiNote: 12
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: me
+        midiNote: 13
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: them
+        midiNote: 14
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: him
+        midiNote: 15
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: her
+        midiNote: 16
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: me
+        midiNote: 17
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5
+      - word: you
+        midiNote: 18
+        noteIdleVelocity: 78
+        noteActiveVelocity: 5

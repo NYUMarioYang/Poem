@@ -534,10 +534,8 @@ namespace jp.kshoji.unity.midi.sample
 
             SC_Grid.TriggerGridSelection(note);
 
-            if (note == 19)
-            {
-                SC_PoemDatabase.Singleton.AddLineToDatabase();
-            }
+            Debug.Log("Note: " + note);
+
 
             if (isPlaySound)
             {
@@ -607,6 +605,10 @@ namespace jp.kshoji.unity.midi.sample
         public void OnMidiControlChange(string deviceId, int group, int channel, int function, int value)
         {
             receivedMidiMessages.Add($"OnMidiControlChange from: {deviceId}, channel: {channel}, function: {function}, value: {value}");
+            if (function == 19 && GlobalVariables.ready) { 
+                Debug.Log("triggered");
+                SC_PoemDatabase.Singleton.AddLineToDatabase();
+            }
         }
 
         public void OnMidiSongSelect(string deviceId, int group, int song)

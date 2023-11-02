@@ -12,4 +12,6 @@ public static class GlobalVariables
     public static int deviceIdIndex;
     public static int channel;
 
+    public static bool ready = true;
+
 }
